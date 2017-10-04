@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0F4C63451F851BE4002015EF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63441F851BE4002015EF /* Lesson.swift */; };
 		0F4C63471F851D4A002015EF /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63461F851D4A002015EF /* UICollectionView.swift */; };
+		0F4C634A1F851F72002015EF /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63481F851F72002015EF /* LessonCell.swift */; };
+		0F4C634B1F851F72002015EF /* LessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4C63491F851F72002015EF /* LessonCell.xib */; };
+		0F4C634E1F852560002015EF /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C634D1F852560002015EF /* UITableView.swift */; };
+		0F4C63511F85266D002015EF /* DetailLessonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C634F1F85266D002015EF /* DetailLessonVC.swift */; };
+		0F4C63521F85266D002015EF /* DetailLessonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4C63501F85266D002015EF /* DetailLessonVC.xib */; };
 		0F8D2F991F850DAC009810A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D2F981F850DAC009810A1 /* AppDelegate.swift */; };
 		0F8D2FA01F850DAC009810A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D2F9F1F850DAC009810A1 /* Assets.xcassets */; };
 		0F8D2FA31F850DAC009810A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D2FA11F850DAC009810A1 /* LaunchScreen.storyboard */; };
@@ -29,6 +34,11 @@
 /* Begin PBXFileReference section */
 		0F4C63441F851BE4002015EF /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		0F4C63461F851D4A002015EF /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		0F4C63481F851F72002015EF /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
+		0F4C63491F851F72002015EF /* LessonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonCell.xib; sourceTree = "<group>"; };
+		0F4C634D1F852560002015EF /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		0F4C634F1F85266D002015EF /* DetailLessonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLessonVC.swift; sourceTree = "<group>"; };
+		0F4C63501F85266D002015EF /* DetailLessonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailLessonVC.xib; sourceTree = "<group>"; };
 		0F8D2F951F850DAC009810A1 /* weShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8D2F981F850DAC009810A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F8D2F9F1F850DAC009810A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +72,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4C634C1F851F76002015EF /* LessonCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F4C63481F851F72002015EF /* LessonCell.swift */,
+				0F4C63491F851F72002015EF /* LessonCell.xib */,
+			);
+			path = LessonCell;
+			sourceTree = "<group>";
+		};
+		0F4C63531F852671002015EF /* DetailLessonVC */ = {
+			isa = PBXGroup;
+			children = (
+				0F4C634F1F85266D002015EF /* DetailLessonVC.swift */,
+				0F4C63501F85266D002015EF /* DetailLessonVC.xib */,
+			);
+			path = DetailLessonVC;
+			sourceTree = "<group>";
+		};
 		0F8D2F8C1F850DAC009810A1 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +114,7 @@
 				0F8D2FAE1F850E80009810A1 /* Home */,
 				0F8D2FB31F85133B009810A1 /* LeftMenuVC */,
 				0F8D2FC51F851B0F009810A1 /* LessonsVC */,
+				0F4C63531F852671002015EF /* DetailLessonVC */,
 				0F8D2FBB1F8518ED009810A1 /* Model */,
 				0F8D2FB61F851385009810A1 /* Extension */,
 				0F8D2F981F850DAC009810A1 /* AppDelegate.swift */,
@@ -120,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				0F8D2FB41F85137B009810A1 /* NSObject.swift */,
+				0F4C634D1F852560002015EF /* UITableView.swift */,
 				0F4C63461F851D4A002015EF /* UICollectionView.swift */,
 			);
 			path = Extension;
@@ -148,6 +178,7 @@
 			children = (
 				0F8D2FC11F851B03009810A1 /* LessonsVC.swift */,
 				0F8D2FC21F851B03009810A1 /* LessonsVC.xib */,
+				0F4C634C1F851F76002015EF /* LessonCell */,
 			);
 			path = LessonsVC;
 			sourceTree = "<group>";
@@ -234,7 +265,9 @@
 				0F8D2FC41F851B03009810A1 /* LessonsVC.xib in Resources */,
 				0F8D2FB21F851336009810A1 /* LeftMenuVC.xib in Resources */,
 				0F8D2FA31F850DAC009810A1 /* LaunchScreen.storyboard in Resources */,
+				0F4C63521F85266D002015EF /* DetailLessonVC.xib in Resources */,
 				0F8D2FBF1F851954009810A1 /* SubjectCollectionViewCell.xib in Resources */,
+				0F4C634B1F851F72002015EF /* LessonCell.xib in Resources */,
 				0F8D2FAD1F850E7A009810A1 /* HomeVC.xib in Resources */,
 				0F8D2FA01F850DAC009810A1 /* Assets.xcassets in Resources */,
 			);
@@ -300,9 +333,12 @@
 				0F8D2FBE1F851954009810A1 /* SubjectCollectionViewCell.swift in Sources */,
 				0F8D2FAC1F850E7A009810A1 /* HomeVC.swift in Sources */,
 				0F8D2FC31F851B03009810A1 /* LessonsVC.swift in Sources */,
+				0F4C634E1F852560002015EF /* UITableView.swift in Sources */,
+				0F4C634A1F851F72002015EF /* LessonCell.swift in Sources */,
 				0F8D2FB51F85137B009810A1 /* NSObject.swift in Sources */,
 				0F8D2FB81F851471009810A1 /* DefaultVC.swift in Sources */,
 				0F8D2F991F850DAC009810A1 /* AppDelegate.swift in Sources */,
+				0F4C63511F85266D002015EF /* DetailLessonVC.swift in Sources */,
 				0F8D2FBA1F85189D009810A1 /* Subject.swift in Sources */,
 				0F8D2FB11F851336009810A1 /* LeftMenuVC.swift in Sources */,
 			);

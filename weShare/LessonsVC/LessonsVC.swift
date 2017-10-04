@@ -18,6 +18,8 @@ class LessonsVC: UIViewController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.registerCellNib(cellClass: LessonCell.self)
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,16 +30,18 @@ class LessonsVC: UIViewController {
 
 extension LessonsVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lessons.count
+        //return lessons.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Test"
+        let cell = tableView.dequeueReusableCell(withIdentifier: LessonCell.className()) as! LessonCell
+        cell.bindData(title: "Test")
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let detailLessonVC = DetailLessonVC(nibName: DetailLessonVC.className(), bundle: nil)
+        navigationController?.pushViewController(detailLessonVC, animated: true)
     }
 }
