@@ -6,7 +6,7 @@ target 'weShare' do
   use_frameworks!
 
   # Pods for weShare
-  pod 'ObjectMapper', '~> 2.2'
+  pod 'ObjectMapper', '~> 2.2.9'
   pod 'Alamofire', '~> 4.4’
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'SWRevealViewController', '~> 2.3'

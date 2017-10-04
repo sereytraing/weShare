@@ -7,15 +7,35 @@
 //
 
 import UIKit
+import SWRevealViewController
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDelegate {
 
     var window: UIWindow?
-
+    var viewController: SWRevealViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let homeVC = HomeVC(nibName: HomeVC.className(), bundle: nil)
+        let leftMenuVC = LeftMenuVC(nibName: LeftMenuVC.className(), bundle: nil)
+        let navigationController = UINavigationController(rootViewController: homeVC)
+        
+        let revealVC = SWRevealViewController(rearViewController: leftMenuVC, frontViewController: navigationController)
+        revealVC?.delegate = self;
+        self.viewController = revealVC
+        
+        window?.rootViewController = self.viewController
+        window?.makeKeyAndVisible()
+        
+        /*let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.tintColor = UIColor.white
+        navigationBarAppearance.barTintColor = UIColor.black
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName: Style.Color.orange,
+                                                       NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 22)!]
+        */
+        
         return true
     }
 
