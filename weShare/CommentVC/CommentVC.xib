@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentVC" customModule="weShare" customModuleProvider="target">
+            <connections>
+                <outlet property="submitButton" destination="j40-tb-gTp" id="pAr-Lt-UZQ"/>
+                <outlet property="tableView" destination="hdA-Kz-Ny6" id="4cX-Dq-wqK"/>
+                <outlet property="textField" destination="YV7-rn-Y4D" id="qkn-TB-qs6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Votre commentaire" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YV7-rn-Y4D">
+                    <rect key="frame" x="20" y="617" width="210" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j40-tb-gTp">
+                    <rect key="frame" x="250" y="617" width="105" height="30"/>
+                    <state key="normal" title="Envoyer"/>
+                    <connections>
+                        <action selector="submitButtonClicked:" destination="-1" eventType="touchUpInside" id="sL6-rf-gQp"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Kz-Ny6">
+                    <rect key="frame" x="20" y="30" width="335" height="567"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YV7-rn-Y4D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5Bb-yV-oGP"/>
+                <constraint firstItem="hdA-Kz-Ny6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="G6b-lN-bGR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YV7-rn-Y4D" secondAttribute="bottom" constant="20" id="Leb-Ml-LXb"/>
+                <constraint firstItem="hdA-Kz-Ny6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="RQh-iR-hm0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="j40-tb-gTp" secondAttribute="bottom" constant="20" id="X1a-O4-nJr"/>
+                <constraint firstItem="YV7-rn-Y4D" firstAttribute="top" secondItem="hdA-Kz-Ny6" secondAttribute="bottom" constant="20" id="ZcV-m0-dtS"/>
+                <constraint firstItem="j40-tb-gTp" firstAttribute="width" secondItem="YV7-rn-Y4D" secondAttribute="width" multiplier="0.5" id="bV0-bW-S4G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j40-tb-gTp" secondAttribute="trailing" constant="20" id="dE1-0e-JDg"/>
+                <constraint firstItem="j40-tb-gTp" firstAttribute="leading" secondItem="YV7-rn-Y4D" secondAttribute="trailing" constant="20" id="eX4-pr-VVH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hdA-Kz-Ny6" secondAttribute="trailing" constant="20" id="uEr-k5-jnl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

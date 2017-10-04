@@ -28,6 +28,8 @@
 		0F8D2FBF1F851954009810A1 /* SubjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D2FBD1F851954009810A1 /* SubjectCollectionViewCell.xib */; };
 		0F8D2FC31F851B03009810A1 /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D2FC11F851B03009810A1 /* LessonsVC.swift */; };
 		0F8D2FC41F851B03009810A1 /* LessonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D2FC21F851B03009810A1 /* LessonsVC.xib */; };
+		0F9E0BEC1F854532000542DE /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E0BEA1F854532000542DE /* CommentVC.swift */; };
+		0F9E0BED1F854532000542DE /* CommentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E0BEB1F854532000542DE /* CommentVC.xib */; };
 		0FF868731F852E180065CE83 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF868711F852E180065CE83 /* QuizVC.swift */; };
 		0FF868741F852E180065CE83 /* QuizVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF868721F852E180065CE83 /* QuizVC.xib */; };
 		0FF868781F8531390065CE83 /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF868761F8531390065CE83 /* LeftMenuCell.swift */; };
@@ -61,6 +63,8 @@
 		0F8D2FBD1F851954009810A1 /* SubjectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCollectionViewCell.xib; sourceTree = "<group>"; };
 		0F8D2FC11F851B03009810A1 /* LessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsVC.swift; sourceTree = "<group>"; };
 		0F8D2FC21F851B03009810A1 /* LessonsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonsVC.xib; sourceTree = "<group>"; };
+		0F9E0BEA1F854532000542DE /* CommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
+		0F9E0BEB1F854532000542DE /* CommentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentVC.xib; sourceTree = "<group>"; };
 		0FF868711F852E180065CE83 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		0FF868721F852E180065CE83 /* QuizVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizVC.xib; sourceTree = "<group>"; };
 		0FF868761F8531390065CE83 /* LeftMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				0F4C63531F852671002015EF /* DetailLessonVC */,
 				0FF868751F852E1F0065CE83 /* QuizVC */,
 				0FF8687F1F8534320065CE83 /* AuthVC */,
+				0F9E0BEE1F854536000542DE /* CommentVC */,
 				0F8D2FBB1F8518ED009810A1 /* Model */,
 				0F8D2FB61F851385009810A1 /* Extension */,
 				0F8D2F981F850DAC009810A1 /* AppDelegate.swift */,
@@ -196,6 +201,15 @@
 				0F4C634C1F851F76002015EF /* LessonCell */,
 			);
 			path = LessonsVC;
+			sourceTree = "<group>";
+		};
+		0F9E0BEE1F854536000542DE /* CommentVC */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E0BEA1F854532000542DE /* CommentVC.swift */,
+				0F9E0BEB1F854532000542DE /* CommentVC.xib */,
+			);
+			path = CommentVC;
 			sourceTree = "<group>";
 		};
 		0FF868751F852E1F0065CE83 /* QuizVC */ = {
@@ -314,6 +328,7 @@
 				0F8D2FAD1F850E7A009810A1 /* HomeVC.xib in Resources */,
 				0FF8687E1F85342B0065CE83 /* AuthVC.xib in Resources */,
 				0F8D2FA01F850DAC009810A1 /* Assets.xcassets in Resources */,
+				0F9E0BED1F854532000542DE /* CommentVC.xib in Resources */,
 				0FF868741F852E180065CE83 /* QuizVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +397,7 @@
 				0F8D2FAC1F850E7A009810A1 /* HomeVC.swift in Sources */,
 				0F8D2FC31F851B03009810A1 /* LessonsVC.swift in Sources */,
 				0F4C634E1F852560002015EF /* UITableView.swift in Sources */,
+				0F9E0BEC1F854532000542DE /* CommentVC.swift in Sources */,
 				0F4C634A1F851F72002015EF /* LessonCell.swift in Sources */,
 				0F8D2FB51F85137B009810A1 /* NSObject.swift in Sources */,
 				0F8D2FB81F851471009810A1 /* DefaultVC.swift in Sources */,

@@ -13,7 +13,7 @@ class LeftMenuVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-     var items: [String] = ["Accueil", "Profil", "Rechercher un étudiant"]
+    var items: [String] = ["Accueil", "Se connecter", "Rechercher un étudiant"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
