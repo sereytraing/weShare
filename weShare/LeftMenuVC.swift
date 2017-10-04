@@ -7,29 +7,55 @@
 //
 
 import UIKit
+import SWRevealViewController
 
 class LeftMenuVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+     var items: [String] = ["Accueil", "Profil", "Rechercher un étudiant"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.registerCellNib(cellClass: LeftMenuCell.self)
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension LeftMenuVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: LeftMenuCell.className()) as! LeftMenuCell
+        cell.bindData(name: self.items[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var revealVC: SWRevealViewController
+        revealVC = self.revealViewController()
+        switch (indexPath.row) {
+        case 0:
+            let homeVC = HomeVC(nibName: HomeVC.className(), bundle: nil)
+            let newRootVC = UINavigationController(rootViewController: homeVC)
+            revealVC.pushFrontViewController(newRootVC, animated: true)
+            
+        case 1:
+            let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
+            let newRootVC = UINavigationController(rootViewController: authVC)
+            revealVC.pushFrontViewController(newRootVC, animated: true)
+            
+        default:
+            break;
+        }
+    }
 }

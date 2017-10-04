@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DetailLessonVC: UIViewController {
-
-    @IBOutlet weak var title: UILabel!
+class DetailLessonVC: DefaultVC {
+    
+    @IBOutlet weak var nameLesson: UILabel!
     @IBOutlet weak var author: UILabel!
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var qcmButton: UIButton!
@@ -26,6 +26,8 @@ class DetailLessonVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func qcmButtonTouched(_ sender: Any) {
+        let quizVC = QuizVC(nibName: QuizVC.className(), bundle: nil)
+        navigationController?.pushViewController(quizVC, animated: true)
     }
     @IBAction func commentButtonTouched(_ sender: Any) {
     }

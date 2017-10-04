@@ -28,6 +28,12 @@
 		0F8D2FBF1F851954009810A1 /* SubjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D2FBD1F851954009810A1 /* SubjectCollectionViewCell.xib */; };
 		0F8D2FC31F851B03009810A1 /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D2FC11F851B03009810A1 /* LessonsVC.swift */; };
 		0F8D2FC41F851B03009810A1 /* LessonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D2FC21F851B03009810A1 /* LessonsVC.xib */; };
+		0FF868731F852E180065CE83 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF868711F852E180065CE83 /* QuizVC.swift */; };
+		0FF868741F852E180065CE83 /* QuizVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF868721F852E180065CE83 /* QuizVC.xib */; };
+		0FF868781F8531390065CE83 /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF868761F8531390065CE83 /* LeftMenuCell.swift */; };
+		0FF868791F8531390065CE83 /* LeftMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF868771F8531390065CE83 /* LeftMenuCell.xib */; };
+		0FF8687D1F85342B0065CE83 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8687B1F85342B0065CE83 /* AuthVC.swift */; };
+		0FF8687E1F85342B0065CE83 /* AuthVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FF8687C1F85342B0065CE83 /* AuthVC.xib */; };
 		68294190DB625BB37D32286D /* Pods_weShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66FB0373AB7C734341719B3 /* Pods_weShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +61,12 @@
 		0F8D2FBD1F851954009810A1 /* SubjectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCollectionViewCell.xib; sourceTree = "<group>"; };
 		0F8D2FC11F851B03009810A1 /* LessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsVC.swift; sourceTree = "<group>"; };
 		0F8D2FC21F851B03009810A1 /* LessonsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonsVC.xib; sourceTree = "<group>"; };
+		0FF868711F852E180065CE83 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
+		0FF868721F852E180065CE83 /* QuizVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizVC.xib; sourceTree = "<group>"; };
+		0FF868761F8531390065CE83 /* LeftMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
+		0FF868771F8531390065CE83 /* LeftMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftMenuCell.xib; sourceTree = "<group>"; };
+		0FF8687B1F85342B0065CE83 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		0FF8687C1F85342B0065CE83 /* AuthVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthVC.xib; sourceTree = "<group>"; };
 		A0DBED7B63CC484EEC467A99 /* Pods-weShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weShare/Pods-weShare.debug.xcconfig"; sourceTree = "<group>"; };
 		C66FB0373AB7C734341719B3 /* Pods_weShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2045E441683979471D6B299 /* Pods-weShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-weShare/Pods-weShare.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +127,8 @@
 				0F8D2FB31F85133B009810A1 /* LeftMenuVC */,
 				0F8D2FC51F851B0F009810A1 /* LessonsVC */,
 				0F4C63531F852671002015EF /* DetailLessonVC */,
+				0FF868751F852E1F0065CE83 /* QuizVC */,
+				0FF8687F1F8534320065CE83 /* AuthVC */,
 				0F8D2FBB1F8518ED009810A1 /* Model */,
 				0F8D2FB61F851385009810A1 /* Extension */,
 				0F8D2F981F850DAC009810A1 /* AppDelegate.swift */,
@@ -141,6 +155,7 @@
 			children = (
 				0F8D2FAF1F851336009810A1 /* LeftMenuVC.swift */,
 				0F8D2FB01F851336009810A1 /* LeftMenuVC.xib */,
+				0FF8687A1F85313E0065CE83 /* LeftMenuCell */,
 			);
 			name = LeftMenuVC;
 			sourceTree = "<group>";
@@ -181,6 +196,33 @@
 				0F4C634C1F851F76002015EF /* LessonCell */,
 			);
 			path = LessonsVC;
+			sourceTree = "<group>";
+		};
+		0FF868751F852E1F0065CE83 /* QuizVC */ = {
+			isa = PBXGroup;
+			children = (
+				0FF868711F852E180065CE83 /* QuizVC.swift */,
+				0FF868721F852E180065CE83 /* QuizVC.xib */,
+			);
+			path = QuizVC;
+			sourceTree = "<group>";
+		};
+		0FF8687A1F85313E0065CE83 /* LeftMenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				0FF868761F8531390065CE83 /* LeftMenuCell.swift */,
+				0FF868771F8531390065CE83 /* LeftMenuCell.xib */,
+			);
+			name = LeftMenuCell;
+			sourceTree = "<group>";
+		};
+		0FF8687F1F8534320065CE83 /* AuthVC */ = {
+			isa = PBXGroup;
+			children = (
+				0FF8687B1F85342B0065CE83 /* AuthVC.swift */,
+				0FF8687C1F85342B0065CE83 /* AuthVC.xib */,
+			);
+			path = AuthVC;
 			sourceTree = "<group>";
 		};
 		84BEA515CDDE19052959644F /* Frameworks */ = {
@@ -263,13 +305,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F8D2FC41F851B03009810A1 /* LessonsVC.xib in Resources */,
+				0FF868791F8531390065CE83 /* LeftMenuCell.xib in Resources */,
 				0F8D2FB21F851336009810A1 /* LeftMenuVC.xib in Resources */,
 				0F8D2FA31F850DAC009810A1 /* LaunchScreen.storyboard in Resources */,
 				0F4C63521F85266D002015EF /* DetailLessonVC.xib in Resources */,
 				0F8D2FBF1F851954009810A1 /* SubjectCollectionViewCell.xib in Resources */,
 				0F4C634B1F851F72002015EF /* LessonCell.xib in Resources */,
 				0F8D2FAD1F850E7A009810A1 /* HomeVC.xib in Resources */,
+				0FF8687E1F85342B0065CE83 /* AuthVC.xib in Resources */,
 				0F8D2FA01F850DAC009810A1 /* Assets.xcassets in Resources */,
+				0FF868741F852E180065CE83 /* QuizVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +374,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F4C63471F851D4A002015EF /* UICollectionView.swift in Sources */,
+				0FF868731F852E180065CE83 /* QuizVC.swift in Sources */,
+				0FF8687D1F85342B0065CE83 /* AuthVC.swift in Sources */,
+				0FF868781F8531390065CE83 /* LeftMenuCell.swift in Sources */,
 				0F4C63451F851BE4002015EF /* Lesson.swift in Sources */,
 				0F8D2FBE1F851954009810A1 /* SubjectCollectionViewCell.swift in Sources */,
 				0F8D2FAC1F850E7A009810A1 /* HomeVC.swift in Sources */,

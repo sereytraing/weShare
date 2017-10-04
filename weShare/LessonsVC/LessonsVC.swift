@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LessonsVC: UIViewController {
+class LessonsVC: DefaultVC {
 
     @IBOutlet weak var tableView: UITableView!
     

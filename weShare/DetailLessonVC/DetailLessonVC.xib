@@ -14,9 +14,9 @@
             <connections>
                 <outlet property="author" destination="dgS-2y-bez" id="RpT-GQ-trz"/>
                 <outlet property="commentButton" destination="3FX-Vi-xPY" id="jFM-qc-gyg"/>
+                <outlet property="nameLesson" destination="nvF-RW-UaZ" id="oVO-tA-78w"/>
                 <outlet property="qcmButton" destination="8kj-zY-UxL" id="zTo-mb-BdU"/>
                 <outlet property="text" destination="Mj5-q0-1ye" id="ayH-BJ-2vJ"/>
-                <outlet property="title" destination="nvF-RW-UaZ" id="GFC-zr-SY7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
