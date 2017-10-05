@@ -11,6 +11,8 @@ import SWRevealViewController
 
 class DefaultVC: UIViewController {
     
+    let urlBase = "http://localhost:3003"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = []

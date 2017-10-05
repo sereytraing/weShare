@@ -50,12 +50,32 @@ extension LeftMenuVC: UITableViewDataSource, UITableViewDelegate {
             revealVC.pushFrontViewController(newRootVC, animated: true)
             
         case 1:
-            let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
-            let newRootVC = UINavigationController(rootViewController: authVC)
-            revealVC.pushFrontViewController(newRootVC, animated: true)
+            if UserInfoSaver().isAuth() {
+                // Une page
+            } else {
+                let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
+                let newRootVC = UINavigationController(rootViewController: authVC)
+                revealVC.pushFrontViewController(newRootVC, animated: true)
+            }
+        case 2:
+            if UserInfoSaver().isAuth() {
+                // Une page
+            } else {
+                let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
+                let newRootVC = UINavigationController(rootViewController: authVC)
+                revealVC.pushFrontViewController(newRootVC, animated: true)
+            }
             
         default:
             break;
         }
     }
 }
+
+/*if UserInfoSaver().isAuth() {
+    // Une page
+} else {
+    let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
+    let newRootVC = UINavigationController(rootViewController: authVC)
+    revealVC.pushFrontViewController(newRootVC, animated: true)
+}*/

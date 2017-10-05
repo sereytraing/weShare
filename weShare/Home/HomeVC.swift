@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireObjectMapper
 
 class HomeVC: DefaultVC {
 
@@ -16,7 +18,7 @@ class HomeVC: DefaultVC {
     let lineSpacing : CGFloat = 10.0
     let inset : CGFloat = 10.0
     
-    var subjects = [Subject]()
+    var contents = [Content]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,31 +30,46 @@ class HomeVC: DefaultVC {
         layout.minimumInteritemSpacing = 0.0
         layout.minimumLineSpacing = 0.0
         self.collectionView.collectionViewLayout = layout
-        
-        self.collectionView.reloadData()
+        self.requestLesson()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func requestLesson() {
+        let url = self.urlBase + "/contents"
+        let header: HTTPHeaders = [
+            "Accept": "application/json"
+        ]
+
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseArray(completionHandler: {
+            (response: DataResponse<[Content]>) in
+            if let response = response.result.value {
+                self.contents = response
+                self.collectionView.reloadData()
+            }
+        })
+    }
 }
 
 extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return self.subjects.count
-        return 2
+        return self.contents.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SubjectCollectionViewCell.className(), for: indexPath as IndexPath) as! SubjectCollectionViewCell
         cell.backgroundColor = UIColor.red
+        cell.bindData(imageName: nil, title: contents[indexPath.row].title)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let lessonsVC = LessonsVC(nibName: LessonsVC.className(), bundle: nil)
-        navigationController?.pushViewController(lessonsVC, animated: true)
+        let detailLessonVC = DetailLessonVC(nibName: DetailLessonVC.className(), bundle: nil)
+        detailLessonVC.urlPdf = self.contents[indexPath.row].fileUrl
+        navigationController?.pushViewController(detailLessonVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

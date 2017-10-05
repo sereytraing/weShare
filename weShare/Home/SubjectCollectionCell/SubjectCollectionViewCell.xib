@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,31 +15,54 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SubjectCollectionViewCell" customModule="weShare" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="315" height="190"/>
+            <rect key="frame" x="0.0" y="0.0" width="315" height="197"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="315" height="190"/>
+                <rect key="frame" x="0.0" y="0.0" width="315" height="197"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_burger" translatesAutoresizingMaskIntoConstraints="NO" id="Vcw-zo-WwU">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vcw-zo-WwU">
                         <rect key="frame" x="0.0" y="0.0" width="315" height="177"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Vcw-zo-WwU" secondAttribute="height" multiplier="16:9" id="6pJ-Vp-F9Y"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJH-dQ-aZf">
+                        <rect key="frame" x="0.0" y="124" width="315" height="53"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="PAD-2k-Mb5">
+                                <rect key="frame" x="20" y="17.5" width="275" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PAD-2k-Mb5" firstAttribute="centerY" secondItem="EJH-dQ-aZf" secondAttribute="centerY" id="WNj-nB-Puy"/>
+                            <constraint firstAttribute="trailing" secondItem="PAD-2k-Mb5" secondAttribute="trailing" constant="20" id="ZHG-t9-6sn"/>
+                            <constraint firstItem="PAD-2k-Mb5" firstAttribute="leading" secondItem="EJH-dQ-aZf" secondAttribute="leading" constant="20" id="l7P-5N-MQ8"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="Vcw-zo-WwU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dyw-7B-XOf"/>
+                <constraint firstItem="EJH-dQ-aZf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Nta-fW-W4o"/>
+                <constraint firstItem="EJH-dQ-aZf" firstAttribute="bottom" secondItem="Vcw-zo-WwU" secondAttribute="bottom" id="UIo-7r-DKr"/>
                 <constraint firstItem="Vcw-zo-WwU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VXN-S0-7tL"/>
                 <constraint firstAttribute="trailing" secondItem="Vcw-zo-WwU" secondAttribute="trailing" id="ZwP-oj-auU"/>
+                <constraint firstItem="EJH-dQ-aZf" firstAttribute="height" secondItem="Vcw-zo-WwU" secondAttribute="height" multiplier="0.3" id="wIM-Fl-8Ek"/>
+                <constraint firstAttribute="trailing" secondItem="EJH-dQ-aZf" secondAttribute="trailing" id="wVq-zl-E7D"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="303" height="183"/>
-            <point key="canvasLocation" x="99.5" y="61.5"/>
+            <size key="customSize" width="303" height="190"/>
+            <connections>
+                <outlet property="container" destination="EJH-dQ-aZf" id="WB7-04-h3O"/>
+                <outlet property="imageView" destination="Vcw-zo-WwU" id="luA-9L-ryz"/>
+                <outlet property="titleLabel" destination="PAD-2k-Mb5" id="5s6-lw-qxk"/>
+            </connections>
+            <point key="canvasLocation" x="99.5" y="64.5"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="ico_burger" width="27" height="19"/>
-    </resources>
 </document>

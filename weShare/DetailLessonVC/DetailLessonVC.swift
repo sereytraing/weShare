@@ -6,19 +6,29 @@
 //  Copyright © 2017 TRAING Serey. All rights reserved.
 //
 
+import WebKit
 import UIKit
 
 class DetailLessonVC: DefaultVC {
     
     @IBOutlet weak var nameLesson: UILabel!
     @IBOutlet weak var author: UILabel!
-    @IBOutlet weak var text: UILabel!
     @IBOutlet weak var qcmButton: UIButton!
     @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var viewPdf: UIView!
+    
+    var urlPdf: String?
+    var webView: WKWebView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if let url = URL(string: urlPdf!) {
+            let urlRequest = URLRequest(url: url)
+            self.webView = WKWebView()
+            self.webView?.frame = self.viewPdf.bounds
+            self.webView?.load(urlRequest)
+            self.viewPdf.addSubview(webView!)
+        }
     }
 
     override func didReceiveMemoryWarning() {

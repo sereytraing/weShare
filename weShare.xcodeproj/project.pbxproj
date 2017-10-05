@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3E843C1F8609A6001BFBCD /* UserInfoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E843B1F8609A6001BFBCD /* UserInfoSaver.swift */; };
+		0F3E843E1F860A37001BFBCD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E843D1F860A37001BFBCD /* User.swift */; };
+		0F3E84411F861449001BFBCD /* SearchStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E843F1F861449001BFBCD /* SearchStudentVC.swift */; };
+		0F3E84421F861449001BFBCD /* SearchStudentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3E84401F861449001BFBCD /* SearchStudentVC.xib */; };
+		0F3E84451F86234F001BFBCD /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E84441F86234F001BFBCD /* ResponseLogin.swift */; };
+		0F3E84481F862701001BFBCD /* AuthResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E84461F862701001BFBCD /* AuthResultVC.swift */; };
+		0F3E84491F862701001BFBCD /* AuthResultVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3E84471F862701001BFBCD /* AuthResultVC.xib */; };
+		0F3E844B1F862CDB001BFBCD /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E844A1F862CDB001BFBCD /* Content.swift */; };
 		0F4C63451F851BE4002015EF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63441F851BE4002015EF /* Lesson.swift */; };
 		0F4C63471F851D4A002015EF /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63461F851D4A002015EF /* UICollectionView.swift */; };
 		0F4C634A1F851F72002015EF /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63481F851F72002015EF /* LessonCell.swift */; };
@@ -40,6 +48,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3E843B1F8609A6001BFBCD /* UserInfoSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoSaver.swift; sourceTree = "<group>"; };
+		0F3E843D1F860A37001BFBCD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0F3E843F1F861449001BFBCD /* SearchStudentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudentVC.swift; sourceTree = "<group>"; };
+		0F3E84401F861449001BFBCD /* SearchStudentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchStudentVC.xib; sourceTree = "<group>"; };
+		0F3E84441F86234F001BFBCD /* ResponseLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLogin.swift; sourceTree = "<group>"; };
+		0F3E84461F862701001BFBCD /* AuthResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResultVC.swift; sourceTree = "<group>"; };
+		0F3E84471F862701001BFBCD /* AuthResultVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthResultVC.xib; sourceTree = "<group>"; };
+		0F3E844A1F862CDB001BFBCD /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		0F4C63441F851BE4002015EF /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		0F4C63461F851D4A002015EF /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		0F4C63481F851F72002015EF /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
@@ -88,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3E84431F86144E001BFBCD /* SearchStudentVC */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E843F1F861449001BFBCD /* SearchStudentVC.swift */,
+				0F3E84401F861449001BFBCD /* SearchStudentVC.xib */,
+			);
+			path = SearchStudentVC;
+			sourceTree = "<group>";
+		};
 		0F4C634C1F851F76002015EF /* LessonCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +159,7 @@
 				0FF868751F852E1F0065CE83 /* QuizVC */,
 				0FF8687F1F8534320065CE83 /* AuthVC */,
 				0F9E0BEE1F854536000542DE /* CommentVC */,
+				0F3E84431F86144E001BFBCD /* SearchStudentVC */,
 				0F8D2FBB1F8518ED009810A1 /* Model */,
 				0F8D2FB61F851385009810A1 /* Extension */,
 				0F8D2F981F850DAC009810A1 /* AppDelegate.swift */,
@@ -141,6 +167,7 @@
 				0F8D2F9F1F850DAC009810A1 /* Assets.xcassets */,
 				0F8D2FA11F850DAC009810A1 /* LaunchScreen.storyboard */,
 				0F8D2FA41F850DAC009810A1 /* Info.plist */,
+				0F3E843B1F8609A6001BFBCD /* UserInfoSaver.swift */,
 			);
 			path = weShare;
 			sourceTree = "<group>";
@@ -179,7 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				0F4C63441F851BE4002015EF /* Lesson.swift */,
+				0F3E844A1F862CDB001BFBCD /* Content.swift */,
+				0F3E84441F86234F001BFBCD /* ResponseLogin.swift */,
 				0F8D2FB91F85189D009810A1 /* Subject.swift */,
+				0F3E843D1F860A37001BFBCD /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +265,8 @@
 			children = (
 				0FF8687B1F85342B0065CE83 /* AuthVC.swift */,
 				0FF8687C1F85342B0065CE83 /* AuthVC.xib */,
+				0F3E84461F862701001BFBCD /* AuthResultVC.swift */,
+				0F3E84471F862701001BFBCD /* AuthResultVC.xib */,
 			);
 			path = AuthVC;
 			sourceTree = "<group>";
@@ -324,10 +356,12 @@
 				0F8D2FA31F850DAC009810A1 /* LaunchScreen.storyboard in Resources */,
 				0F4C63521F85266D002015EF /* DetailLessonVC.xib in Resources */,
 				0F8D2FBF1F851954009810A1 /* SubjectCollectionViewCell.xib in Resources */,
+				0F3E84421F861449001BFBCD /* SearchStudentVC.xib in Resources */,
 				0F4C634B1F851F72002015EF /* LessonCell.xib in Resources */,
 				0F8D2FAD1F850E7A009810A1 /* HomeVC.xib in Resources */,
 				0FF8687E1F85342B0065CE83 /* AuthVC.xib in Resources */,
 				0F8D2FA01F850DAC009810A1 /* Assets.xcassets in Resources */,
+				0F3E84491F862701001BFBCD /* AuthResultVC.xib in Resources */,
 				0F9E0BED1F854532000542DE /* CommentVC.xib in Resources */,
 				0FF868741F852E180065CE83 /* QuizVC.xib in Resources */,
 			);
@@ -391,20 +425,26 @@
 				0F4C63471F851D4A002015EF /* UICollectionView.swift in Sources */,
 				0FF868731F852E180065CE83 /* QuizVC.swift in Sources */,
 				0FF8687D1F85342B0065CE83 /* AuthVC.swift in Sources */,
+				0F3E84481F862701001BFBCD /* AuthResultVC.swift in Sources */,
 				0FF868781F8531390065CE83 /* LeftMenuCell.swift in Sources */,
+				0F3E84451F86234F001BFBCD /* ResponseLogin.swift in Sources */,
 				0F4C63451F851BE4002015EF /* Lesson.swift in Sources */,
+				0F3E844B1F862CDB001BFBCD /* Content.swift in Sources */,
 				0F8D2FBE1F851954009810A1 /* SubjectCollectionViewCell.swift in Sources */,
 				0F8D2FAC1F850E7A009810A1 /* HomeVC.swift in Sources */,
 				0F8D2FC31F851B03009810A1 /* LessonsVC.swift in Sources */,
 				0F4C634E1F852560002015EF /* UITableView.swift in Sources */,
 				0F9E0BEC1F854532000542DE /* CommentVC.swift in Sources */,
+				0F3E84411F861449001BFBCD /* SearchStudentVC.swift in Sources */,
 				0F4C634A1F851F72002015EF /* LessonCell.swift in Sources */,
 				0F8D2FB51F85137B009810A1 /* NSObject.swift in Sources */,
+				0F3E843C1F8609A6001BFBCD /* UserInfoSaver.swift in Sources */,
 				0F8D2FB81F851471009810A1 /* DefaultVC.swift in Sources */,
 				0F8D2F991F850DAC009810A1 /* AppDelegate.swift in Sources */,
 				0F4C63511F85266D002015EF /* DetailLessonVC.swift in Sources */,
 				0F8D2FBA1F85189D009810A1 /* Subject.swift in Sources */,
 				0F8D2FB11F851336009810A1 /* LeftMenuVC.swift in Sources */,
+				0F3E843E1F860A37001BFBCD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
