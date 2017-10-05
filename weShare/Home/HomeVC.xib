@@ -21,6 +21,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="weShare" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="HAE-RW-q0M" id="3eq-0a-WNZ"/>
                 <outlet property="collectionView" destination="4bs-Ek-RLe" id="jXH-IR-CZX"/>
                 <outlet property="noResultLabel" destination="ioC-kN-fTZ" id="4D2-nc-DuH"/>
                 <outlet property="searchButton" destination="Fbw-7V-YPc" id="zQW-Ua-HL8"/>
@@ -66,6 +67,10 @@
                     <color key="textColor" red="0.25098039215686274" green="0.27450980392156865" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="HAE-RW-q0M">
+                    <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                    <color key="color" red="0.61176470589999998" green="0.76470588240000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -76,9 +81,11 @@
                 <constraint firstItem="Fbw-7V-YPc" firstAttribute="baseline" secondItem="9QS-gN-Q0d" secondAttribute="baseline" id="ED1-LO-YhC"/>
                 <constraint firstItem="4bs-Ek-RLe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EZC-95-f6Q"/>
                 <constraint firstItem="9QS-gN-Q0d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JPC-JT-6yF"/>
+                <constraint firstItem="HAE-RW-q0M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vxe-9Q-x0R"/>
                 <constraint firstItem="Fbw-7V-YPc" firstAttribute="width" secondItem="9QS-gN-Q0d" secondAttribute="width" multiplier="0.4" id="YZL-4U-pDu"/>
                 <constraint firstItem="9QS-gN-Q0d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ZEo-tT-Fhl"/>
                 <constraint firstItem="4bs-Ek-RLe" firstAttribute="top" secondItem="9QS-gN-Q0d" secondAttribute="bottom" constant="20" id="aGi-3b-5qI"/>
+                <constraint firstItem="HAE-RW-q0M" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bG2-CY-fZI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4bs-Ek-RLe" secondAttribute="trailing" id="k8Y-WG-vg9"/>
                 <constraint firstItem="ioC-kN-fTZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="l1c-Uj-sVz"/>
             </constraints>

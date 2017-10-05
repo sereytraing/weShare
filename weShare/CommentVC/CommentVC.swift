@@ -18,7 +18,7 @@ class CommentVC: UIViewController {
                  "Jean",
                  "Walid"]
     var comments = ["Génial, vraiment intéressant !",
-                    "Merci beaucoup pour ce petit cours, ça m'a bien aidé dfdgdgdfdfdfdfdfdfdfdfdfdfdfdfdfdfd! ",
+                    "Merci beaucoup pour ce petit cours, ça m'a bien aidé !",
                     "Je recommande :)"]
     
     override func viewDidLoad() {
@@ -31,6 +31,8 @@ class CommentVC: UIViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.tableFooterView = UIView()
         self.tableView.separatorStyle = .none
+        
+        self.submitButton.layer.cornerRadius = 5.0
     }
     
     override func didReceiveMemoryWarning() {

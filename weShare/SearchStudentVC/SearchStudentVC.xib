@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchStudentVC" customModule="weShare" customModuleProvider="target">
             <connections>
@@ -27,31 +32,35 @@
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom d'étudiant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="548-Bf-zfp">
                     <rect key="frame" x="20" y="40" width="217" height="30"/>
                     <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCZ-gE-hXf">
                     <rect key="frame" x="247" y="40" width="108" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <color key="backgroundColor" red="0.72778637459999995" green="0.85132044380000005" blue="0.87605092009999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="Rechercher">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="submitButtonClicked:" destination="-1" eventType="touchUpInside" id="SSI-kL-355"/>
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w4L-gK-vja">
-                    <rect key="frame" x="20" y="90" width="335" height="557"/>
+                    <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SCZ-gE-hXf" secondAttribute="trailing" constant="20" id="A0S-0t-3Yl"/>
-                <constraint firstItem="w4L-gK-vja" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="CnD-7s-oSR"/>
+                <constraint firstItem="w4L-gK-vja" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CnD-7s-oSR"/>
                 <constraint firstItem="548-Bf-zfp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Eet-xW-lJd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w4L-gK-vja" secondAttribute="trailing" constant="20" id="T7m-gu-LwF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w4L-gK-vja" secondAttribute="trailing" id="T7m-gu-LwF"/>
                 <constraint firstItem="SCZ-gE-hXf" firstAttribute="width" secondItem="548-Bf-zfp" secondAttribute="width" multiplier="0.5" id="W0j-76-O90"/>
                 <constraint firstItem="SCZ-gE-hXf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Z2a-nE-V8o"/>
                 <constraint firstItem="548-Bf-zfp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="gtj-VU-zoo"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="w4L-gK-vja" secondAttribute="bottom" constant="20" id="krU-Pb-qJA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="w4L-gK-vja" secondAttribute="bottom" id="krU-Pb-qJA"/>
                 <constraint firstItem="SCZ-gE-hXf" firstAttribute="leading" secondItem="548-Bf-zfp" secondAttribute="trailing" constant="10" id="q8z-oH-t4W"/>
                 <constraint firstItem="w4L-gK-vja" firstAttribute="top" secondItem="548-Bf-zfp" secondAttribute="bottom" constant="20" id="qfl-Ru-DFw"/>
             </constraints>

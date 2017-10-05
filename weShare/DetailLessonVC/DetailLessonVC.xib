@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="activityIndicator" destination="bAd-GP-wo6" id="dCL-dx-2MF"/>
                 <outlet property="commentButton" destination="3FX-Vi-xPY" id="jFM-qc-gyg"/>
+                <outlet property="infoButton" destination="3E9-8T-hvd" id="KWG-7G-eYc"/>
                 <outlet property="qcmButton" destination="8kj-zY-UxL" id="zTo-mb-BdU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewPdf" destination="YTc-Od-psa" id="2it-9j-FFe"/>
@@ -67,6 +68,20 @@
                         <action selector="commentButtonTouched:" destination="-1" eventType="touchUpInside" id="YHC-wr-fbb"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3E9-8T-hvd">
+                    <rect key="frame" x="315" y="30" width="50" height="50"/>
+                    <color key="backgroundColor" red="0.72778637459999995" green="0.85132044380000005" blue="0.87605092009999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2Bq-Kl-bmF"/>
+                        <constraint firstAttribute="width" constant="50" id="Ltd-PC-qj2"/>
+                    </constraints>
+                    <state key="normal" title="i">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="infoButtonClicked:" destination="-1" eventType="touchUpInside" id="aMn-Vl-pux"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -74,9 +89,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3FX-Vi-xPY" secondAttribute="bottom" id="9Zk-uZ-Ycb"/>
                 <constraint firstItem="3FX-Vi-xPY" firstAttribute="leading" secondItem="8kj-zY-UxL" secondAttribute="trailing" id="BYA-fR-u1M"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3FX-Vi-xPY" secondAttribute="trailing" id="PkB-Uo-nnU"/>
+                <constraint firstItem="3E9-8T-hvd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="XeZ-X2-xza"/>
                 <constraint firstItem="YTc-Od-psa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="a78-Pa-hkK"/>
                 <constraint firstItem="3FX-Vi-xPY" firstAttribute="width" secondItem="8kj-zY-UxL" secondAttribute="width" id="diN-sY-6Ub"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YTc-Od-psa" secondAttribute="bottom" id="lo9-o9-GpR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3E9-8T-hvd" secondAttribute="trailing" constant="10" id="nQr-bG-uep"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8kj-zY-UxL" secondAttribute="bottom" id="qam-Qk-e2n"/>
                 <constraint firstItem="YTc-Od-psa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="r0l-QJ-9iT"/>
                 <constraint firstItem="8kj-zY-UxL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t0a-ax-Ual"/>

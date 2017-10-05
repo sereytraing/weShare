@@ -22,25 +22,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eqs-GP-avh">
-                    <rect key="frame" x="0.0" y="160" width="375" height="507"/>
+                    <rect key="frame" x="0.0" y="200" width="375" height="467"/>
                     <color key="backgroundColor" red="0.61176470589999998" green="0.76470588240000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoProject" translatesAutoresizingMaskIntoConstraints="NO" id="85u-WK-fNt">
-                    <rect key="frame" x="80" y="20" width="90" height="90"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcW-hQ-c7y">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoProject" translatesAutoresizingMaskIntoConstraints="NO" id="85u-WK-fNt">
+                            <rect key="frame" x="70" y="40" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="Iaa-ca-plO"/>
+                                <constraint firstAttribute="width" constant="120" id="KOy-Iv-wfz"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.72778637459999995" green="0.85132044380000005" blue="0.87605092009999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="Iaa-ca-plO"/>
-                        <constraint firstAttribute="width" constant="90" id="KOy-Iv-wfz"/>
+                        <constraint firstAttribute="bottom" secondItem="85u-WK-fNt" secondAttribute="bottom" constant="40" id="4i5-4m-NDg"/>
+                        <constraint firstItem="85u-WK-fNt" firstAttribute="top" secondItem="CcW-hQ-c7y" secondAttribute="top" constant="40" id="aov-s0-p8C"/>
+                        <constraint firstItem="85u-WK-fNt" firstAttribute="leading" secondItem="CcW-hQ-c7y" secondAttribute="leading" constant="70" id="eua-cD-fDe"/>
                     </constraints>
-                </imageView>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.61176470589999998" green="0.76470588240000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Eqs-GP-avh" secondAttribute="trailing" id="0Mp-47-EBd"/>
-                <constraint firstItem="85u-WK-fNt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="1MY-MN-ZLU"/>
-                <constraint firstItem="85u-WK-fNt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="FrF-Y9-u0d"/>
+                <constraint firstItem="CcW-hQ-c7y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8Yd-HR-FK6"/>
+                <constraint firstItem="CcW-hQ-c7y" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="OV6-Uh-3b7"/>
                 <constraint firstItem="Eqs-GP-avh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PnX-lP-E1G"/>
+                <constraint firstItem="Eqs-GP-avh" firstAttribute="top" secondItem="CcW-hQ-c7y" secondAttribute="bottom" id="oLK-uL-NIF"/>
+                <constraint firstItem="CcW-hQ-c7y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qGm-9V-amG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Eqs-GP-avh" secondAttribute="bottom" id="qw9-ej-RLs"/>
-                <constraint firstItem="Eqs-GP-avh" firstAttribute="top" secondItem="85u-WK-fNt" secondAttribute="bottom" constant="50" id="ykF-gL-KNm"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.5" y="107.5"/>

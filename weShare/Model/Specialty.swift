@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class Speciality: Mappable {
+class Specialty: Mappable {
     var id: Int?
     var title: String?
     var logo: String?

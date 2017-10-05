@@ -18,7 +18,9 @@ class DefaultVC: UIViewController {
         self.edgesForExtendedLayout = []
         self.setNeedsStatusBarAppearanceUpdate()
         self.navigationController?.navigationBar.barTintColor = Style.Color.blue
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
     }
     
     override func viewWillAppear(_ animated: Bool) {

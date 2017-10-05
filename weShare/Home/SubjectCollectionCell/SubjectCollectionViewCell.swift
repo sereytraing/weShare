@@ -13,6 +13,7 @@ class SubjectCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

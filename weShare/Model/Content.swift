@@ -17,7 +17,7 @@ class Content: Mappable {
     var userId: String?
     var createdAt: String?
     var updatedAt: String?
-    var specialty: Speciality?
+    var specialty: Specialty?
     
     required init?(map: Map) {
         //no-op

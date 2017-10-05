@@ -21,10 +21,14 @@ class SearchStudentVC: DefaultVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addLeftMenuButton()
+        self.title = "Etudiants"
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.registerCellNib(cellClass: SearchStudentCell.self)
+        self.tableView.tableFooterView = UIView()
+        
+        self.submitButton.layer.cornerRadius = 5.0
         
         self.requestAllStudent()
     }
@@ -67,6 +71,8 @@ extension SearchStudentVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let profileVC = ProfileVC(nibName: ProfileVC.className(), bundle: nil)
+        profileVC.idReceived = self.users[indexPath.row].id
+        navigationController?.pushViewController(profileVC, animated: true)
     }
 }

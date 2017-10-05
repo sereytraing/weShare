@@ -15,6 +15,7 @@ class DetailLessonVC: DefaultVC {
     @IBOutlet weak var qcmButton: UIButton!
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var viewPdf: UIView!
+    @IBOutlet weak var infoButton: UIButton!
     
     var content: Content?
     var webView: UIWebView?
@@ -33,8 +34,9 @@ class DetailLessonVC: DefaultVC {
             self.webView?.loadRequest(urlRequest)
         }
         self.title = self.content?.title
+        self.infoButton.layer.cornerRadius = 25.0
+        self.infoButton.clipsToBounds = true
         
-        self.navigationController?.navigationBar.backItem?.title = "Anything Else"
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +61,12 @@ class DetailLessonVC: DefaultVC {
     @IBAction func commentButtonTouched(_ sender: Any) {
         let commentVC = CommentVC(nibName: CommentVC.className(), bundle: nil)
         navigationController?.pushViewController(commentVC, animated: true)
+    }
+    @IBAction func infoButtonClicked(_ sender: Any) {
+        let descriptionVC = DescriptionVC(nibName: DescriptionVC.className(), bundle: nil)
+        descriptionVC.descriptionDoc = self.content?.description
+        descriptionVC.titleDoc = self.content?.title
+        navigationController?.pushViewController(descriptionVC, animated: true)
     }
 }
 
