@@ -1,5 +1,5 @@
 //
-//  Content.swift
+//  Speciality.swift
 //  weShare
 //
 //  Created by TRAING Serey on 05/10/2017.
@@ -9,15 +9,14 @@
 import Foundation
 import ObjectMapper
 
-class Content: Mappable {
+class Speciality: Mappable {
     var id: Int?
     var title: String?
-    var description: String?
-    var fileUrl: String?
-    var userId: String?
+    var logo: String?
     var createdAt: String?
     var updatedAt: String?
-    var specialities: [Speciality]?
+    var userId: Int?
+    var contentId: Int?
     
     required init?(map: Map) {
         //no-op
@@ -26,11 +25,10 @@ class Content: Mappable {
     func mapping(map: Map) {
         id <- map["id"]
         title <- map["title"]
-        description <- map["description"]
-        fileUrl <- map["fileUrl"]
-        userId <- map["userId"]
+        logo <- map["logo"]
         createdAt <- map["createdAt"]
         updatedAt <- map["updatedAt"]
-        specialities <- map["specialities"]
+        userId <- map["userId"]
+        contentId <- map["contentId"]
     }
 }

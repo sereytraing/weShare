@@ -12,16 +12,23 @@ import AlamofireObjectMapper
 
 class HomeVC: DefaultVC {
 
+    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var noResultLabel: UILabel!
     
     let lineSpacing : CGFloat = 10.0
     let inset : CGFloat = 10.0
     
     var contents = [Content]()
+    let header: HTTPHeaders = [
+        "Accept": "application/json"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "weShare"
+        self.noResultLabel.isHidden = true
         self.addLeftMenuButton()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -29,6 +36,7 @@ class HomeVC: DefaultVC {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0.0
         layout.minimumLineSpacing = 0.0
+        searchButton.layer.cornerRadius = 5.0
         self.collectionView.collectionViewLayout = layout
         self.requestLesson()
     }
@@ -40,9 +48,6 @@ class HomeVC: DefaultVC {
     
     func requestLesson() {
         let url = self.urlBase + "/contents"
-        let header: HTTPHeaders = [
-            "Accept": "application/json"
-        ]
 
         Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseArray(completionHandler: {
             (response: DataResponse<[Content]>) in
@@ -51,6 +56,33 @@ class HomeVC: DefaultVC {
                 self.collectionView.reloadData()
             }
         })
+    }
+    
+    func requestSearchContent(word: String!) {
+        let url = self.urlBase + "/contents?" + word.lowercased()
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseArray(completionHandler: {
+            (response: DataResponse<[Content]>) in
+            if let response = response.result.value {
+                self.contents = response
+                self.collectionView.reloadData()
+                if self.contents.count == 0 {
+                    self.noResultLabel.isHidden = false
+                } else {
+                    self.noResultLabel.isHidden = true
+                }
+            }
+        })
+    }
+    
+    @IBAction func searchButtonClicked(_ sender: Any) {
+        if !(self.textField.text?.isEmpty)! {
+            self.requestSearchContent(word: self.textField.text)
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.collectionView.reloadData()
     }
 }
 
@@ -61,14 +93,14 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SubjectCollectionViewCell.className(), for: indexPath as IndexPath) as! SubjectCollectionViewCell
-        cell.backgroundColor = UIColor.red
+        //if let imageUrl = self.contents[indexPath.row].specialities
         cell.bindData(imageName: nil, title: contents[indexPath.row].title)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailLessonVC = DetailLessonVC(nibName: DetailLessonVC.className(), bundle: nil)
-        detailLessonVC.urlPdf = self.contents[indexPath.row].fileUrl
+        detailLessonVC.content = self.contents[indexPath.row]
         navigationController?.pushViewController(detailLessonVC, animated: true)
     }
     

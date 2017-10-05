@@ -11,12 +11,14 @@ import SWRevealViewController
 
 class DefaultVC: UIViewController {
     
-    let urlBase = "http://localhost:3003"
+    let urlBase = "http://vps464005.ovh.net:3000"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = []
         self.setNeedsStatusBarAppearanceUpdate()
+        self.navigationController?.navigationBar.barTintColor = Style.Color.blue
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +36,7 @@ class DefaultVC: UIViewController {
         revealController.tapGestureRecognizer()
         let menuIcon = UIImage(named: "ico_burger")
         let leftItem = UIBarButtonItem(image: menuIcon, style: .plain, target: revealController, action: #selector(revealController.revealToggle(_:)))
+        leftItem.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = leftItem
         self.addGestureMenu()
     }

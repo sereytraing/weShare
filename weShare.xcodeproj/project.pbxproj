@@ -15,6 +15,13 @@
 		0F3E84481F862701001BFBCD /* AuthResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E84461F862701001BFBCD /* AuthResultVC.swift */; };
 		0F3E84491F862701001BFBCD /* AuthResultVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3E84471F862701001BFBCD /* AuthResultVC.xib */; };
 		0F3E844B1F862CDB001BFBCD /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E844A1F862CDB001BFBCD /* Content.swift */; };
+		0F3E844E1F86514B001BFBCD /* SearchStudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E844C1F86514A001BFBCD /* SearchStudentCell.swift */; };
+		0F3E844F1F86514B001BFBCD /* SearchStudentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3E844D1F86514A001BFBCD /* SearchStudentCell.xib */; };
+		0F3E84531F865334001BFBCD /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E84511F865334001BFBCD /* CommentCell.swift */; };
+		0F3E84541F865334001BFBCD /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3E84521F865334001BFBCD /* CommentCell.xib */; };
+		0F3E84571F865E80001BFBCD /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E84561F865E80001BFBCD /* Style.swift */; };
+		0F3E84591F865EA0001BFBCD /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E84581F865EA0001BFBCD /* UIColor.swift */; };
+		0F3E845B1F866B5E001BFBCD /* Speciality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E845A1F866B5E001BFBCD /* Speciality.swift */; };
 		0F4C63451F851BE4002015EF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63441F851BE4002015EF /* Lesson.swift */; };
 		0F4C63471F851D4A002015EF /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63461F851D4A002015EF /* UICollectionView.swift */; };
 		0F4C634A1F851F72002015EF /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63481F851F72002015EF /* LessonCell.swift */; };
@@ -56,6 +63,13 @@
 		0F3E84461F862701001BFBCD /* AuthResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResultVC.swift; sourceTree = "<group>"; };
 		0F3E84471F862701001BFBCD /* AuthResultVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthResultVC.xib; sourceTree = "<group>"; };
 		0F3E844A1F862CDB001BFBCD /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		0F3E844C1F86514A001BFBCD /* SearchStudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudentCell.swift; sourceTree = "<group>"; };
+		0F3E844D1F86514A001BFBCD /* SearchStudentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchStudentCell.xib; sourceTree = "<group>"; };
+		0F3E84511F865334001BFBCD /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		0F3E84521F865334001BFBCD /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		0F3E84561F865E80001BFBCD /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		0F3E84581F865EA0001BFBCD /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		0F3E845A1F866B5E001BFBCD /* Speciality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speciality.swift; sourceTree = "<group>"; };
 		0F4C63441F851BE4002015EF /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		0F4C63461F851D4A002015EF /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		0F4C63481F851F72002015EF /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
@@ -109,8 +123,27 @@
 			children = (
 				0F3E843F1F861449001BFBCD /* SearchStudentVC.swift */,
 				0F3E84401F861449001BFBCD /* SearchStudentVC.xib */,
+				0F3E84501F865157001BFBCD /* SearchStudentCell */,
 			);
 			path = SearchStudentVC;
+			sourceTree = "<group>";
+		};
+		0F3E84501F865157001BFBCD /* SearchStudentCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E844C1F86514A001BFBCD /* SearchStudentCell.swift */,
+				0F3E844D1F86514A001BFBCD /* SearchStudentCell.xib */,
+			);
+			path = SearchStudentCell;
+			sourceTree = "<group>";
+		};
+		0F3E84551F865338001BFBCD /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F3E84511F865334001BFBCD /* CommentCell.swift */,
+				0F3E84521F865334001BFBCD /* CommentCell.xib */,
+			);
+			path = CommentCell;
 			sourceTree = "<group>";
 		};
 		0F4C634C1F851F76002015EF /* LessonCell */ = {
@@ -168,6 +201,7 @@
 				0F8D2FA11F850DAC009810A1 /* LaunchScreen.storyboard */,
 				0F8D2FA41F850DAC009810A1 /* Info.plist */,
 				0F3E843B1F8609A6001BFBCD /* UserInfoSaver.swift */,
+				0F3E84561F865E80001BFBCD /* Style.swift */,
 			);
 			path = weShare;
 			sourceTree = "<group>";
@@ -198,6 +232,7 @@
 				0F8D2FB41F85137B009810A1 /* NSObject.swift */,
 				0F4C634D1F852560002015EF /* UITableView.swift */,
 				0F4C63461F851D4A002015EF /* UICollectionView.swift */,
+				0F3E84581F865EA0001BFBCD /* UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,6 +245,7 @@
 				0F3E84441F86234F001BFBCD /* ResponseLogin.swift */,
 				0F8D2FB91F85189D009810A1 /* Subject.swift */,
 				0F3E843D1F860A37001BFBCD /* User.swift */,
+				0F3E845A1F866B5E001BFBCD /* Speciality.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +274,7 @@
 			children = (
 				0F9E0BEA1F854532000542DE /* CommentVC.swift */,
 				0F9E0BEB1F854532000542DE /* CommentVC.xib */,
+				0F3E84551F865338001BFBCD /* CommentCell */,
 			);
 			path = CommentVC;
 			sourceTree = "<group>";
@@ -353,12 +390,14 @@
 				0F8D2FC41F851B03009810A1 /* LessonsVC.xib in Resources */,
 				0FF868791F8531390065CE83 /* LeftMenuCell.xib in Resources */,
 				0F8D2FB21F851336009810A1 /* LeftMenuVC.xib in Resources */,
+				0F3E84541F865334001BFBCD /* CommentCell.xib in Resources */,
 				0F8D2FA31F850DAC009810A1 /* LaunchScreen.storyboard in Resources */,
 				0F4C63521F85266D002015EF /* DetailLessonVC.xib in Resources */,
 				0F8D2FBF1F851954009810A1 /* SubjectCollectionViewCell.xib in Resources */,
 				0F3E84421F861449001BFBCD /* SearchStudentVC.xib in Resources */,
 				0F4C634B1F851F72002015EF /* LessonCell.xib in Resources */,
 				0F8D2FAD1F850E7A009810A1 /* HomeVC.xib in Resources */,
+				0F3E844F1F86514B001BFBCD /* SearchStudentCell.xib in Resources */,
 				0FF8687E1F85342B0065CE83 /* AuthVC.xib in Resources */,
 				0F8D2FA01F850DAC009810A1 /* Assets.xcassets in Resources */,
 				0F3E84491F862701001BFBCD /* AuthResultVC.xib in Resources */,
@@ -427,6 +466,8 @@
 				0FF8687D1F85342B0065CE83 /* AuthVC.swift in Sources */,
 				0F3E84481F862701001BFBCD /* AuthResultVC.swift in Sources */,
 				0FF868781F8531390065CE83 /* LeftMenuCell.swift in Sources */,
+				0F3E84571F865E80001BFBCD /* Style.swift in Sources */,
+				0F3E84531F865334001BFBCD /* CommentCell.swift in Sources */,
 				0F3E84451F86234F001BFBCD /* ResponseLogin.swift in Sources */,
 				0F4C63451F851BE4002015EF /* Lesson.swift in Sources */,
 				0F3E844B1F862CDB001BFBCD /* Content.swift in Sources */,
@@ -442,9 +483,12 @@
 				0F8D2FB81F851471009810A1 /* DefaultVC.swift in Sources */,
 				0F8D2F991F850DAC009810A1 /* AppDelegate.swift in Sources */,
 				0F4C63511F85266D002015EF /* DetailLessonVC.swift in Sources */,
+				0F3E845B1F866B5E001BFBCD /* Speciality.swift in Sources */,
+				0F3E84591F865EA0001BFBCD /* UIColor.swift in Sources */,
 				0F8D2FBA1F85189D009810A1 /* Subject.swift in Sources */,
 				0F8D2FB11F851336009810A1 /* LeftMenuVC.swift in Sources */,
 				0F3E843E1F860A37001BFBCD /* User.swift in Sources */,
+				0F3E844E1F86514B001BFBCD /* SearchStudentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

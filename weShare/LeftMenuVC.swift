@@ -13,7 +13,7 @@ class LeftMenuVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var items: [String] = ["Accueil", "Se connecter", "Rechercher un étudiant"]
+    var items: [String] = ["Accueil", "Profil", "Rechercher un étudiant"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,9 @@ class LeftMenuVC: UIViewController {
         self.tableView.dataSource = self
         self.tableView.registerCellNib(cellClass: LeftMenuCell.self)
         self.tableView.reloadData()
+        self.tableView.alwaysBounceVertical = false
+        self.tableView.tableFooterView = UIView()
+        self.tableView.separatorStyle = .none
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +39,11 @@ extension LeftMenuVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LeftMenuCell.className()) as! LeftMenuCell
-        cell.bindData(name: self.items[indexPath.row])
+        cell.bindData(name: self.items[indexPath.row].uppercased())
+        cell.selectionStyle = .none
+        if indexPath.row % 2 == 1 {
+            cell.backgroundColor = Style.Color.orange
+        }
         return cell
     }
     
@@ -50,22 +57,14 @@ extension LeftMenuVC: UITableViewDataSource, UITableViewDelegate {
             revealVC.pushFrontViewController(newRootVC, animated: true)
             
         case 1:
-            if UserInfoSaver().isAuth() {
-                // Une page
-            } else {
-                let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
-                let newRootVC = UINavigationController(rootViewController: authVC)
-                revealVC.pushFrontViewController(newRootVC, animated: true)
-            }
-        case 2:
-            if UserInfoSaver().isAuth() {
-                // Une page
-            } else {
-                let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
-                let newRootVC = UINavigationController(rootViewController: authVC)
-                revealVC.pushFrontViewController(newRootVC, animated: true)
-            }
+            let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
+            let newRootVC = UINavigationController(rootViewController: authVC)
+            revealVC.pushFrontViewController(newRootVC, animated: true)
             
+        case 2:
+            let searchStudentVC = SearchStudentVC(nibName: SearchStudentVC.className(), bundle: nil)
+            let newRootVC = UINavigationController(rootViewController: searchStudentVC)
+            revealVC.pushFrontViewController(newRootVC, animated: true)
         default:
             break;
         }
