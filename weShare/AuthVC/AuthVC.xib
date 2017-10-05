@@ -9,13 +9,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthVC" customModule="weShare" customModuleProvider="target">
             <connections>
                 <outlet property="passwordLabel" destination="mEG-qJ-5Tp" id="wr1-IE-8Sq"/>
                 <outlet property="passwordTextField" destination="602-nH-3tZ" id="S6s-Oh-F6W"/>
                 <outlet property="submitButton" destination="UZC-cd-Xtl" id="mdH-iW-oCx"/>
-                <outlet property="titleLabel" destination="1is-yZ-a9g" id="odL-o8-Yq0"/>
                 <outlet property="usernameLabel" destination="ehB-nS-2NS" id="NPK-aD-mMQ"/>
                 <outlet property="usernameTextField" destination="wsH-mt-3Nk" id="iBJ-uD-AEi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,48 +30,46 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wsH-mt-3Nk">
-                    <rect key="frame" x="180" y="78" width="165" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="wsH-mt-3Nk">
+                    <rect key="frame" x="180" y="33.5" width="165" height="30"/>
+                    <color key="textColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="602-nH-3tZ">
-                    <rect key="frame" x="180" y="119" width="165" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <rect key="frame" x="180" y="71.5" width="165" height="30"/>
+                    <color key="textColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1is-yZ-a9g">
-                    <rect key="frame" x="172" y="30" width="31" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mot de passe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEG-qJ-5Tp">
-                    <rect key="frame" x="20" y="122" width="140" height="21"/>
+                    <rect key="frame" x="20" y="78" width="140" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="140" id="r4y-NZ-jPg"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom d'utilisateur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehB-nS-2NS">
-                    <rect key="frame" x="20" y="81" width="140" height="21"/>
+                    <rect key="frame" x="20" y="40" width="140" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="140" id="upp-yE-Nqp"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZC-cd-Xtl">
-                    <rect key="frame" x="20" y="169" width="335" height="50"/>
+                    <rect key="frame" x="50" y="121.5" width="275" height="50"/>
+                    <color key="backgroundColor" red="0.61176470589999998" green="0.76470588240000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="iFF-y9-FAn"/>
                     </constraints>
-                    <state key="normal" title="Se connecter"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="Se connecter">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="submitButtonClicked:" destination="-1" eventType="touchUpInside" id="g9c-hF-Fp4"/>
                     </connections>
@@ -78,18 +80,16 @@
                 <constraint firstItem="UZC-cd-Xtl" firstAttribute="top" secondItem="602-nH-3tZ" secondAttribute="bottom" constant="20" id="0lG-Kf-cDL"/>
                 <constraint firstItem="wsH-mt-3Nk" firstAttribute="leading" secondItem="ehB-nS-2NS" secondAttribute="trailing" constant="20" id="4tt-aa-hQU"/>
                 <constraint firstItem="ehB-nS-2NS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9Qr-dg-U98"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UZC-cd-Xtl" secondAttribute="trailing" constant="20" id="KRJ-mk-ThR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UZC-cd-Xtl" secondAttribute="trailing" constant="50" id="KRJ-mk-ThR"/>
                 <constraint firstItem="mEG-qJ-5Tp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="KsR-gN-FCU"/>
-                <constraint firstItem="1is-yZ-a9g" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="LqB-39-E4f"/>
                 <constraint firstItem="602-nH-3tZ" firstAttribute="leading" secondItem="mEG-qJ-5Tp" secondAttribute="trailing" constant="20" id="MS6-J5-ATI"/>
                 <constraint firstItem="wsH-mt-3Nk" firstAttribute="baseline" secondItem="ehB-nS-2NS" secondAttribute="baseline" id="R80-TE-Uhm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="602-nH-3tZ" secondAttribute="trailing" constant="30" id="UMf-RX-vmg"/>
+                <constraint firstItem="ehB-nS-2NS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="WHc-pY-AfH"/>
                 <constraint firstItem="602-nH-3tZ" firstAttribute="baseline" secondItem="mEG-qJ-5Tp" secondAttribute="baseline" id="as5-R3-vEf"/>
-                <constraint firstItem="1is-yZ-a9g" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eBg-qu-rzT"/>
                 <constraint firstItem="mEG-qJ-5Tp" firstAttribute="top" secondItem="ehB-nS-2NS" secondAttribute="bottom" constant="20" id="eNx-O9-cno"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wsH-mt-3Nk" secondAttribute="trailing" constant="30" id="oaP-W4-2dD"/>
-                <constraint firstItem="ehB-nS-2NS" firstAttribute="top" secondItem="1is-yZ-a9g" secondAttribute="bottom" constant="30" id="toi-YM-AXW"/>
-                <constraint firstItem="UZC-cd-Xtl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tyo-xC-qUs"/>
+                <constraint firstItem="UZC-cd-Xtl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="tyo-xC-qUs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

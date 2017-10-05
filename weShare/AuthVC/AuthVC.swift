@@ -23,6 +23,8 @@ class AuthVC: DefaultVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addLeftMenuButton()
+        self.title = "Authentification"
+        self.submitButton.layer.cornerRadius = 5.0
     }
     
 

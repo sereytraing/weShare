@@ -15,8 +15,10 @@ class AuthResultVC: DefaultVC {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var submitButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.submitButton.layer.cornerRadius = 5.0
         if self.connected {
             self.label.text = "Connexion réussie"
         } else {

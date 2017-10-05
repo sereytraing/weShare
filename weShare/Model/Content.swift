@@ -17,7 +17,7 @@ class Content: Mappable {
     var userId: String?
     var createdAt: String?
     var updatedAt: String?
-    var specialities: [Speciality]?
+    var specialty: Speciality?
     
     required init?(map: Map) {
         //no-op
@@ -31,6 +31,6 @@ class Content: Mappable {
         userId <- map["userId"]
         createdAt <- map["createdAt"]
         updatedAt <- map["updatedAt"]
-        specialities <- map["specialities"]
+        specialty <- map["specialty"]
     }
 }

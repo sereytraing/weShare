@@ -23,6 +23,7 @@ class CommentCell: UITableViewCell {
             self.usernameLabel.text = username
             self.messageLabel.text = message
         }
+        messageLabel.sizeToFit()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -14,5 +14,6 @@ struct Style {
         static let blue = UIColor.colorWithRGB(rgbValue: 0xBDE4EA)
         static let blue2 = UIColor.colorWithRGB(rgbValue: 0x9CC3C8)
         static let grey = UIColor.colorWithRGB(rgbValue: 0x404648)
+        static let lightBlue = UIColor.colorWithRGB(rgbValue: 0xE4F3F1)
     }
 }

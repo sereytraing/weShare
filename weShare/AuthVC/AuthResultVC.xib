@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthResultVC" customModule="weShare" customModuleProvider="target">
             <connections>
@@ -23,14 +31,21 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8R-Nv-5ur">
-                    <rect key="frame" x="166.5" y="40" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="167.5" y="40" width="41" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuf-I5-qIi">
-                    <rect key="frame" x="164.5" y="81" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="50" y="80" width="275" height="50"/>
+                    <color key="backgroundColor" red="0.61176470589999998" green="0.76470588240000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="KIy-4E-EdZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="Continuer">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="submitButtonClicked:" destination="-1" eventType="touchUpInside" id="Ksx-zR-Ug2"/>
                     </connections>
@@ -38,10 +53,11 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Xuf-I5-qIi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ktw-af-MPa"/>
                 <constraint firstItem="Xuf-I5-qIi" firstAttribute="top" secondItem="m8R-Nv-5ur" secondAttribute="bottom" constant="20" id="Qjo-1p-MA2"/>
+                <constraint firstItem="Xuf-I5-qIi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="X4S-i4-AsS"/>
                 <constraint firstItem="m8R-Nv-5ur" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XJ7-eu-pcf"/>
                 <constraint firstItem="m8R-Nv-5ur" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="aM2-ea-tuu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xuf-I5-qIi" secondAttribute="trailing" constant="50" id="hjb-aL-gkS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

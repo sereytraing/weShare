@@ -21,5 +21,13 @@ class SubjectCollectionViewCell: UICollectionViewCell {
     func bindData(imageName: String?, title: String?) {
         self.backgroundColor = UIColor.clear
         self.titleLabel.text = title
+        if imageName != nil {
+            let url = URL(string: imageName!)
+            let data = try? Data(contentsOf: url!)
+            imageView.image = UIImage(data: data!)
+        } else {
+            imageView.image = nil
+        }
     }
 }
+

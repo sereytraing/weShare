@@ -59,7 +59,7 @@ class HomeVC: DefaultVC {
     }
     
     func requestSearchContent(word: String!) {
-        let url = self.urlBase + "/contents?" + word.lowercased()
+        let url = self.urlBase + "/contents/" + word.lowercased()
         Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseArray(completionHandler: {
             (response: DataResponse<[Content]>) in
             if let response = response.result.value {
@@ -93,8 +93,12 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SubjectCollectionViewCell.className(), for: indexPath as IndexPath) as! SubjectCollectionViewCell
-        //if let imageUrl = self.contents[indexPath.row].specialities
-        cell.bindData(imageName: nil, title: contents[indexPath.row].title)
+        if let imageUrl = self.contents[indexPath.row].specialty?.logo {
+            cell.bindData(imageName: imageUrl, title: contents[indexPath.row].title)
+        } else {
+            cell.bindData(imageName: nil, title: contents[indexPath.row].title)
+        }
+        
         return cell
     }
     
