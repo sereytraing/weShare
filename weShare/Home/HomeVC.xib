@@ -41,7 +41,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4bs-Ek-RLe">
-                    <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                    <rect key="frame" x="0.0" y="125" width="375" height="542"/>
                     <color key="backgroundColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FgR-YF-TE0">
                         <size key="itemSize" width="50" height="50"/>
@@ -62,7 +62,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aucun résultat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioC-kN-fTZ">
-                    <rect key="frame" x="142.5" y="110" width="90.5" height="16.5"/>
+                    <rect key="frame" x="142" y="145" width="90.5" height="16.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="0.25098039215686274" green="0.27450980392156865" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -71,11 +71,25 @@
                     <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                     <color key="color" red="0.61176470589999998" green="0.76470588240000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Derniers ajouts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4S-SA-Xuu">
+                    <rect key="frame" x="10" y="101" width="355" height="19"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHE-Gu-ANV">
+                    <rect key="frame" x="60" y="85" width="255" height="1"/>
+                    <color key="backgroundColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="NP5-xr-Apu"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fbw-7V-YPc" secondAttribute="trailing" constant="20" id="2PY-hj-nNl"/>
                 <constraint firstItem="ioC-kN-fTZ" firstAttribute="top" secondItem="4bs-Ek-RLe" secondAttribute="top" constant="20" id="3Tj-kO-L1p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LHE-Gu-ANV" secondAttribute="trailing" constant="60" id="6ad-Y3-AlY"/>
                 <constraint firstItem="Fbw-7V-YPc" firstAttribute="leading" secondItem="9QS-gN-Q0d" secondAttribute="trailing" constant="20" id="74C-ff-r2u"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4bs-Ek-RLe" secondAttribute="bottom" id="APO-VH-yUE"/>
                 <constraint firstItem="Fbw-7V-YPc" firstAttribute="baseline" secondItem="9QS-gN-Q0d" secondAttribute="baseline" id="ED1-LO-YhC"/>
@@ -84,10 +98,15 @@
                 <constraint firstItem="HAE-RW-q0M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vxe-9Q-x0R"/>
                 <constraint firstItem="Fbw-7V-YPc" firstAttribute="width" secondItem="9QS-gN-Q0d" secondAttribute="width" multiplier="0.4" id="YZL-4U-pDu"/>
                 <constraint firstItem="9QS-gN-Q0d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ZEo-tT-Fhl"/>
-                <constraint firstItem="4bs-Ek-RLe" firstAttribute="top" secondItem="9QS-gN-Q0d" secondAttribute="bottom" constant="20" id="aGi-3b-5qI"/>
                 <constraint firstItem="HAE-RW-q0M" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bG2-CY-fZI"/>
+                <constraint firstItem="Y4S-SA-Xuu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="ee7-dH-oFt"/>
+                <constraint firstItem="LHE-Gu-ANV" firstAttribute="top" secondItem="9QS-gN-Q0d" secondAttribute="bottom" constant="15" id="gHc-og-qtz"/>
+                <constraint firstItem="LHE-Gu-ANV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="gIN-x2-Uyl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4bs-Ek-RLe" secondAttribute="trailing" id="k8Y-WG-vg9"/>
                 <constraint firstItem="ioC-kN-fTZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="l1c-Uj-sVz"/>
+                <constraint firstItem="Y4S-SA-Xuu" firstAttribute="top" secondItem="LHE-Gu-ANV" secondAttribute="bottom" constant="15" id="oNy-jG-LkV"/>
+                <constraint firstItem="4bs-Ek-RLe" firstAttribute="top" secondItem="Y4S-SA-Xuu" secondAttribute="bottom" constant="5" id="qUC-ir-ZGs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y4S-SA-Xuu" secondAttribute="trailing" constant="10" id="tBc-yA-bIh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="107.5"/>
