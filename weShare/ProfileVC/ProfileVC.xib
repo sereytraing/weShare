@@ -23,6 +23,7 @@
                 <outlet property="classLabel" destination="MtB-Ah-QMW" id="jtv-5m-tpI"/>
                 <outlet property="collectionView" destination="TGg-Aq-Q53" id="3j4-Lh-PBh"/>
                 <outlet property="nameLabel" destination="5eo-fV-QBq" id="S7B-dg-0qa"/>
+                <outlet property="noCoursLabel" destination="Enu-Zx-cS3" id="fN0-G6-rAX"/>
                 <outlet property="openLabel" destination="Ouq-Qk-oYG" id="Moi-1B-8Fg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -107,6 +108,12 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aucun cours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enu-Zx-cS3">
+                    <rect key="frame" x="10" y="209" width="355" height="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -116,10 +123,12 @@
                 <constraint firstItem="JBv-re-aeD" firstAttribute="top" secondItem="ZYr-wz-lJu" secondAttribute="bottom" id="5wy-XC-TWm"/>
                 <constraint firstItem="Ouq-Qk-oYG" firstAttribute="top" secondItem="JBv-re-aeD" secondAttribute="top" id="6s0-Oa-ZMk"/>
                 <constraint firstItem="MtB-Ah-QMW" firstAttribute="leading" secondItem="ZYr-wz-lJu" secondAttribute="trailing" constant="10" id="8Uj-uN-hx3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Enu-Zx-cS3" secondAttribute="trailing" constant="10" id="92c-6J-hk6"/>
                 <constraint firstItem="TGg-Aq-Q53" firstAttribute="top" secondItem="HAT-X1-MLB" secondAttribute="bottom" constant="10" id="9tR-rO-sob"/>
                 <constraint firstItem="MtB-Ah-QMW" firstAttribute="top" secondItem="ZYr-wz-lJu" secondAttribute="top" id="AA6-nq-iOF"/>
                 <constraint firstItem="Ouq-Qk-oYG" firstAttribute="leading" secondItem="JBv-re-aeD" secondAttribute="trailing" constant="10" id="BHP-Kd-bHp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5eo-fV-QBq" secondAttribute="trailing" constant="10" id="FJJ-za-2ZY"/>
+                <constraint firstItem="Enu-Zx-cS3" firstAttribute="top" secondItem="TGg-Aq-Q53" secondAttribute="top" constant="20" id="FdE-Yk-DGQ"/>
                 <constraint firstItem="ZYr-wz-lJu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="IG0-e5-J6D"/>
                 <constraint firstItem="HAT-X1-MLB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="IpC-9t-1Jo"/>
                 <constraint firstItem="Awv-Xe-lcR" firstAttribute="top" secondItem="a4t-dL-cs8" secondAttribute="bottom" constant="10" id="KRp-5J-sJ4"/>
@@ -135,6 +144,7 @@
                 <constraint firstItem="6hl-T8-RjV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="dZT-Ci-YCF"/>
                 <constraint firstItem="a4t-dL-cs8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="eZZ-tm-Hq9"/>
                 <constraint firstItem="Awv-Xe-lcR" firstAttribute="top" secondItem="JBv-re-aeD" secondAttribute="bottom" constant="20" id="fkl-Df-GT3"/>
+                <constraint firstItem="Enu-Zx-cS3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="gQ1-Vn-dDZ"/>
                 <constraint firstItem="5eo-fV-QBq" firstAttribute="leading" secondItem="6hl-T8-RjV" secondAttribute="trailing" constant="10" id="h3E-VS-f0Z"/>
                 <constraint firstItem="ZYr-wz-lJu" firstAttribute="top" secondItem="6hl-T8-RjV" secondAttribute="bottom" id="lay-HM-1Gl"/>
                 <constraint firstItem="6hl-T8-RjV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="ljc-W2-txB"/>

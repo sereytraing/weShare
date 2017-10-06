@@ -16,6 +16,7 @@ class ProfileVC: DefaultVC {
     @IBOutlet weak var classLabel: UILabel!
     @IBOutlet weak var openLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var noCoursLabel: UILabel!
     
     var user: User?
     var contents = [Content]()
@@ -36,6 +37,7 @@ class ProfileVC: DefaultVC {
         self.collectionView.collectionViewLayout = layout
         self.collectionView.reloadData()
         self.requestUser(id: self.idReceived)
+        self.noCoursLabel.isHidden = true
         
     }
 
@@ -64,6 +66,11 @@ class ProfileVC: DefaultVC {
                 self.contents = response.contents!
                 self.bindData(user: self.user!)
                 self.collectionView.reloadData()
+                if self.contents.count == 0 {
+                    self.noCoursLabel.isHidden = false
+                } else {
+                    self.noCoursLabel.isHidden = true
+                }
             }
         })
     }

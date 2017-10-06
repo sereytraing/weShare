@@ -17,6 +17,7 @@ class HomeVC: DefaultVC {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var noResultLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var partLabel: UILabel!
     
     let lineSpacing : CGFloat = 10.0
     let inset : CGFloat = 10.0
@@ -82,6 +83,7 @@ class HomeVC: DefaultVC {
     @IBAction func searchButtonClicked(_ sender: Any) {
         if !(self.textField.text?.isEmpty)! {
             self.requestSearchContent(word: self.textField.text)
+            self.partLabel.text = "Résultat pour: " + self.textField.text!
         }
     }
     

@@ -24,6 +24,7 @@
                 <outlet property="activityIndicator" destination="HAE-RW-q0M" id="3eq-0a-WNZ"/>
                 <outlet property="collectionView" destination="4bs-Ek-RLe" id="jXH-IR-CZX"/>
                 <outlet property="noResultLabel" destination="ioC-kN-fTZ" id="4D2-nc-DuH"/>
+                <outlet property="partLabel" destination="Y4S-SA-Xuu" id="UbG-V4-HGo"/>
                 <outlet property="searchButton" destination="Fbw-7V-YPc" id="zQW-Ua-HL8"/>
                 <outlet property="textField" destination="9QS-gN-Q0d" id="mcb-m0-6oZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
