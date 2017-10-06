@@ -24,8 +24,6 @@
 		0F3E845B1F866B5E001BFBCD /* Specialty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3E845A1F866B5E001BFBCD /* Specialty.swift */; };
 		0F4C63451F851BE4002015EF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63441F851BE4002015EF /* Lesson.swift */; };
 		0F4C63471F851D4A002015EF /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63461F851D4A002015EF /* UICollectionView.swift */; };
-		0F4C634A1F851F72002015EF /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C63481F851F72002015EF /* LessonCell.swift */; };
-		0F4C634B1F851F72002015EF /* LessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4C63491F851F72002015EF /* LessonCell.xib */; };
 		0F4C634E1F852560002015EF /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C634D1F852560002015EF /* UITableView.swift */; };
 		0F4C63511F85266D002015EF /* DetailLessonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C634F1F85266D002015EF /* DetailLessonVC.swift */; };
 		0F4C63521F85266D002015EF /* DetailLessonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4C63501F85266D002015EF /* DetailLessonVC.xib */; };
@@ -43,8 +41,6 @@
 		0F8D2FBA1F85189D009810A1 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D2FB91F85189D009810A1 /* Subject.swift */; };
 		0F8D2FBE1F851954009810A1 /* SubjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D2FBC1F851954009810A1 /* SubjectCollectionViewCell.swift */; };
 		0F8D2FBF1F851954009810A1 /* SubjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D2FBD1F851954009810A1 /* SubjectCollectionViewCell.xib */; };
-		0F8D2FC31F851B03009810A1 /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D2FC11F851B03009810A1 /* LessonsVC.swift */; };
-		0F8D2FC41F851B03009810A1 /* LessonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D2FC21F851B03009810A1 /* LessonsVC.xib */; };
 		0F9E0BEC1F854532000542DE /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E0BEA1F854532000542DE /* CommentVC.swift */; };
 		0F9E0BED1F854532000542DE /* CommentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E0BEB1F854532000542DE /* CommentVC.xib */; };
 		0FEAC03B1F868E4E0059DA0F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAC0391F868E4E0059DA0F /* ProfileVC.swift */; };
@@ -76,8 +72,6 @@
 		0F3E845A1F866B5E001BFBCD /* Specialty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specialty.swift; sourceTree = "<group>"; };
 		0F4C63441F851BE4002015EF /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		0F4C63461F851D4A002015EF /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
-		0F4C63481F851F72002015EF /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
-		0F4C63491F851F72002015EF /* LessonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonCell.xib; sourceTree = "<group>"; };
 		0F4C634D1F852560002015EF /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		0F4C634F1F85266D002015EF /* DetailLessonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLessonVC.swift; sourceTree = "<group>"; };
 		0F4C63501F85266D002015EF /* DetailLessonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailLessonVC.xib; sourceTree = "<group>"; };
@@ -97,8 +91,6 @@
 		0F8D2FB91F85189D009810A1 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		0F8D2FBC1F851954009810A1 /* SubjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCollectionViewCell.swift; sourceTree = "<group>"; };
 		0F8D2FBD1F851954009810A1 /* SubjectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCollectionViewCell.xib; sourceTree = "<group>"; };
-		0F8D2FC11F851B03009810A1 /* LessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsVC.swift; sourceTree = "<group>"; };
-		0F8D2FC21F851B03009810A1 /* LessonsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonsVC.xib; sourceTree = "<group>"; };
 		0F9E0BEA1F854532000542DE /* CommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
 		0F9E0BEB1F854532000542DE /* CommentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentVC.xib; sourceTree = "<group>"; };
 		0FEAC0391F868E4E0059DA0F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -154,15 +146,6 @@
 			path = CommentCell;
 			sourceTree = "<group>";
 		};
-		0F4C634C1F851F76002015EF /* LessonCell */ = {
-			isa = PBXGroup;
-			children = (
-				0F4C63481F851F72002015EF /* LessonCell.swift */,
-				0F4C63491F851F72002015EF /* LessonCell.xib */,
-			);
-			path = LessonCell;
-			sourceTree = "<group>";
-		};
 		0F4C63531F852671002015EF /* DetailLessonVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +188,6 @@
 			children = (
 				0F8D2FAE1F850E80009810A1 /* Home */,
 				0F8D2FB31F85133B009810A1 /* LeftMenuVC */,
-				0F8D2FC51F851B0F009810A1 /* LessonsVC */,
 				0F4C63531F852671002015EF /* DetailLessonVC */,
 				0FF868751F852E1F0065CE83 /* QuizVC */,
 				0FF8687F1F8534320065CE83 /* AuthVC */,
@@ -275,16 +257,6 @@
 				0F8D2FBD1F851954009810A1 /* SubjectCollectionViewCell.xib */,
 			);
 			path = SubjectCollectionCell;
-			sourceTree = "<group>";
-		};
-		0F8D2FC51F851B0F009810A1 /* LessonsVC */ = {
-			isa = PBXGroup;
-			children = (
-				0F8D2FC11F851B03009810A1 /* LessonsVC.swift */,
-				0F8D2FC21F851B03009810A1 /* LessonsVC.xib */,
-				0F4C634C1F851F76002015EF /* LessonCell */,
-			);
-			path = LessonsVC;
 			sourceTree = "<group>";
 		};
 		0F9E0BEE1F854536000542DE /* CommentVC */ = {
@@ -423,7 +395,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F8D2FC41F851B03009810A1 /* LessonsVC.xib in Resources */,
 				0FF868791F8531390065CE83 /* LeftMenuCell.xib in Resources */,
 				0FEAC03C1F868E4E0059DA0F /* ProfileVC.xib in Resources */,
 				0F51D11E1F86B5E900FD94DB /* DescriptionVC.xib in Resources */,
@@ -433,7 +404,6 @@
 				0F4C63521F85266D002015EF /* DetailLessonVC.xib in Resources */,
 				0F8D2FBF1F851954009810A1 /* SubjectCollectionViewCell.xib in Resources */,
 				0F3E84421F861449001BFBCD /* SearchStudentVC.xib in Resources */,
-				0F4C634B1F851F72002015EF /* LessonCell.xib in Resources */,
 				0F8D2FAD1F850E7A009810A1 /* HomeVC.xib in Resources */,
 				0F3E844F1F86514B001BFBCD /* SearchStudentCell.xib in Resources */,
 				0FF8687E1F85342B0065CE83 /* AuthVC.xib in Resources */,
@@ -512,11 +482,9 @@
 				0F3E844B1F862CDB001BFBCD /* Content.swift in Sources */,
 				0F8D2FBE1F851954009810A1 /* SubjectCollectionViewCell.swift in Sources */,
 				0F8D2FAC1F850E7A009810A1 /* HomeVC.swift in Sources */,
-				0F8D2FC31F851B03009810A1 /* LessonsVC.swift in Sources */,
 				0F4C634E1F852560002015EF /* UITableView.swift in Sources */,
 				0F9E0BEC1F854532000542DE /* CommentVC.swift in Sources */,
 				0F3E84411F861449001BFBCD /* SearchStudentVC.swift in Sources */,
-				0F4C634A1F851F72002015EF /* LessonCell.swift in Sources */,
 				0F8D2FB51F85137B009810A1 /* NSObject.swift in Sources */,
 				0F51D11D1F86B5E900FD94DB /* DescriptionVC.swift in Sources */,
 				0F3E843C1F8609A6001BFBCD /* UserInfoSaver.swift in Sources */,

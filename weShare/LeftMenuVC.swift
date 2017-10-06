@@ -11,9 +11,10 @@ import SWRevealViewController
 
 class LeftMenuVC: UIViewController {
 
+    @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    var items: [String] = ["Accueil", "Profil", "Rechercher un étudiant"]
+    var items: [String] = ["Accueil", "Se connecter", "Rechercher un étudiant"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,27 @@ class LeftMenuVC: UIViewController {
         self.tableView.alwaysBounceVertical = false
         self.tableView.tableFooterView = UIView()
         self.tableView.separatorStyle = .none
+        
+        let ico_logout = UIImage(named: "ico_logout")
+        let tintedImage = ico_logout?.withRenderingMode(.alwaysTemplate)
+        self.disconnectButton.setImage(tintedImage, for: .normal)
+        self.disconnectButton.tintColor = UIColor.white
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+        if UserInfoSaver().isAuth() {
+            self.disconnectButton.isHidden = false
+        } else {
+            self.disconnectButton.isHidden = true
+        }
+    }
+    @IBAction func disconnectButtonClicked(_ sender: Any) {
+        UserInfoSaver().disconnectAccount()
+        self.disconnectButton.isHidden = true
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,7 +59,11 @@ extension LeftMenuVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LeftMenuCell.className()) as! LeftMenuCell
-        cell.bindData(name: self.items[indexPath.row].uppercased())
+        if indexPath.row == 1 && UserInfoSaver().isAuth() {
+            cell.bindData(name: "Mon profil".uppercased())
+        } else {
+            cell.bindData(name: self.items[indexPath.row].uppercased())
+        }
         cell.selectionStyle = .none
         if indexPath.row % 2 == 1 {
             cell.backgroundColor = Style.Color.orange
@@ -57,9 +81,17 @@ extension LeftMenuVC: UITableViewDataSource, UITableViewDelegate {
             revealVC.pushFrontViewController(newRootVC, animated: true)
             
         case 1:
-            let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
-            let newRootVC = UINavigationController(rootViewController: authVC)
-            revealVC.pushFrontViewController(newRootVC, animated: true)
+            if UserInfoSaver().isAuth() {
+                let profileVC = ProfileVC(nibName: ProfileVC.className(), bundle: nil)
+                profileVC.idReceived = UserInfoSaver().getUserId()
+                let newRootVC = UINavigationController(rootViewController: profileVC)
+                revealVC.pushFrontViewController(newRootVC, animated: true)
+            } else {
+                let authVC = AuthVC(nibName: AuthVC.className(), bundle: nil)
+                let newRootVC = UINavigationController(rootViewController: authVC)
+                revealVC.pushFrontViewController(newRootVC, animated: true)
+            }
+            
             
         case 2:
             let searchStudentVC = SearchStudentVC(nibName: SearchStudentVC.className(), bundle: nil)

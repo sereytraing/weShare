@@ -15,7 +15,7 @@ class CommentVC: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
     var users = ["Ludovic",
-                 "Jean",
+                 "Max",
                  "Walid"]
     var comments = ["Génial, vraiment intéressant !",
                     "Merci beaucoup pour ce petit cours, ça m'a bien aidé !",

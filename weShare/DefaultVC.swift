@@ -49,25 +49,5 @@ class DefaultVC: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
     }
-    
-    /*func addRightMenuButton() {
-        let brochetteImage   = UIImage(named: "ico_brochette")!
-        let searchImage = UIImage(named: "ico_search")!
-        let brochetteButton   = UIBarButtonItem(image: brochetteImage,  style: .plain, target: self, action: #selector(DefaultVC.brochetteButtonClicked))
-        let searchButton = UIBarButtonItem(image: searchImage,  style: .plain, target: self, action: #selector(DefaultVC.searchButtonClicked))
-        
-        // Espace entre bouton
-        let fixedSpace:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: nil, action: nil)
-        fixedSpace.width = 0
-        
-        // Espace entre le bord ecran et item
-        let negativeSpace:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: nil, action: nil)
-        negativeSpace.width = -7.5
-        
-        navigationItem.rightBarButtonItems = [negativeSpace, brochetteButton, fixedSpace, searchButton]
-    }*/
-
-
-    
 }
 

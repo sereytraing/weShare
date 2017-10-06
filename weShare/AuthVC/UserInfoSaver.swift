@@ -16,9 +16,9 @@ class UserInfoSaver {
         userDefaults = UserDefaults.standard
     }
     
-    func getUserId() -> String? {
+    func getUserId() -> Int? {
         if let idUser = userDefaults?.string(forKey: "id_user") {
-            return idUser
+            return Int(idUser)
         }
         return nil
     }
@@ -45,6 +45,9 @@ class UserInfoSaver {
     }
     
     func isAuth() -> Bool {
+        if let token = userDefaults?.string(forKey: "token") {
+            return true
+        }
         return false
     }
     

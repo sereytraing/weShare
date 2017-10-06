@@ -26,7 +26,7 @@ class ProfileVC: DefaultVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
-        
+        self.addLeftMenuButton()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.registerCellNib(cellClass: SubjectCollectionViewCell.self)
@@ -52,7 +52,7 @@ class ProfileVC: DefaultVC {
     
     func requestUser(id: Int!) {
         
-        let url = self.urlBase + "/users/\(String(describing: self.idReceived!))"
+        let url = self.urlBase + "/users/\(String(describing: id!))"
         let header: HTTPHeaders = [
             "Accept": "application/json"
         ]

@@ -18,7 +18,7 @@ class ResponseLogin: Mappable {
     }
     
     func mapping(map: Map) {
-        user <- map["usern"]
+        user <- map["user"]
         token <- map["token"]
     }
 }

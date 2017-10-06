@@ -40,6 +40,7 @@ class HomeVC: DefaultVC {
         searchButton.layer.cornerRadius = 5.0
         self.collectionView.collectionViewLayout = layout
         self.requestLesson()
+        //UserInfoSaver().disconnectAccount()
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,7 +103,6 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
         } else {
             cell.bindData(imageName: nil, title: contents[indexPath.row].title)
         }
-        
         return cell
     }
     
