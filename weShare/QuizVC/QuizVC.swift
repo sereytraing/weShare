@@ -38,6 +38,7 @@ class QuizVC: DefaultVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initQuestion()
+        self.title = "QCM"
         self.firstAnswer.layer.cornerRadius = 5.0
         self.secondAnswer.layer.cornerRadius = 5.0
         self.thirdAnswer.layer.cornerRadius = 5.0

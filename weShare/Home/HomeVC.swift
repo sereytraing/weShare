@@ -106,6 +106,11 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.layer.borderColor = Style.Color.lightGrey.cgColor
+        cell.layer.borderWidth = 1.0
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailLessonVC = DetailLessonVC(nibName: DetailLessonVC.className(), bundle: nil)
         detailLessonVC.content = self.contents[indexPath.row]

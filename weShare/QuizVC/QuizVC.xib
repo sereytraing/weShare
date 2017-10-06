@@ -36,6 +36,7 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-vh-pEh">
                     <rect key="frame" x="10" y="35" width="355" height="45"/>
+                    <color key="backgroundColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.28235294119999998" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="MmZ-zF-ayO"/>
                     </constraints>

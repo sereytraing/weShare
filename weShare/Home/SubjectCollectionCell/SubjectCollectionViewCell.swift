@@ -16,11 +16,9 @@ class SubjectCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func bindData(imageName: String?, title: String?) {
-        self.backgroundColor = UIColor.clear
         self.titleLabel.text = title
         if imageName != nil {
             let url = URL(string: imageName!)
