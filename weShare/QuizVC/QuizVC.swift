@@ -26,7 +26,7 @@ class QuizVC: DefaultVC {
     
     
     var questions = ["Q1 - Quand est sorti le Swift ?",
-                     "Q2 - Est-ce que le ; est obligatoire à la fin d'une ligne ?",
+                     "Q2 - Est-ce que le ; est obligatoire à la fin d'une ligne en Swift ?",
                  "Q3 - A quoi sert généralement un TextField ?"]
     var comments = [["2014", "2015", "2016"],
                     ["Oui", "Non", "Ok"],
